@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: green;
+    color: yellow;
+}
+
+h1 {
+    color: blue;
+}
+
+/* Attribute Selector */
+a {
+    color:alicebluetext-decoration:none
+}
+
+a:hover{
+    color: red;
+}
+
+/* Sibling Selector */
+h1 + p {
+    background-color: blue
+    padding: 10px;
+    border-radius:5px;
+}
+
+/* :hover Pseudo-class */
+ul li:hover {
+    color: black;
+}
+
+/* :nth-child(n) pseudo-class */
+ul li:nth-child(3) {
+    backround-color: white
+}
+
+/* :not(selector) Pseudo-class */
+p:not(:first-of-type) {
+    text-decoration: underline;
+}
+
+/*::before Pseudo-element */
+a::after {
+    content: "£";
+}
+
+/* ::first-letter Pseudo-element */
+p::first-letter {
+    font-size: 200%;
+    color: pink
+}
