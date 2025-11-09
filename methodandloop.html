@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HTML &amp; JS Activity</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; padding: 24px; max-width: 900px; margin: auto; }
+    code { background:#f4f4f4; padding:2px 6px; border-radius:4px; }
+    pre { background:#fafafa; padding:12px; border-radius:6px; overflow:auto; }
+    button { padding:8px 12px; font-size:1rem; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h1>HTML &amp; JavaScript Notes</h1>
+
+  <p>
+    The <code>&lt;body&gt;</code> tag defines the main content of an HTML document which displays on the browser. 
+    It can contain text content, lists, paragraphs, headings, images, tables, links, videos, etc.
+  </p>
+
+  <p>
+    The <code>&lt;script&gt;</code> tag contains the script statements.
+  </p>
+
+  <p>
+    To select HTML elements, JS often uses <code>document.getElementById()</code>.
+  </p>
+
+  <p>
+    You need to complete this activity in the same way we did this in the classroom.
+  </p>
+
+  <hr />
+
+  <h2>Simple interactive example</h2>
+  <p>Click the button to change the paragraph text using <code>document.getElementById()</code>:</p>
+
+  <p id="demo">Original paragraph text.</p>
+  <button id="btnChange">Change text</button>
+
+  <pre><code>&lt;script&gt;
+document.getElementById('btnChange').addEventListener('click', function () {
+  document.getElementById('demo').textContent =
+    'Text changed by JavaScript using document.getElementById().';
+});
+&lt;/script&gt;</code></pre>
+
+  <!-- Place scripts at the end of body so DOM elements exist when JS runs -->
+  <script>
+    // Defensive: ensure the elements exist before attaching listeners
+    const btn = document.getElementById('btnChange');
+    const demo = document.getElementById('demo');
+
+    if (btn && demo) {
+      btn.addEventListener('click', function () {
+        demo.textContent = 'Text changed by JavaScript using document.getElementById().';
+      });
+    } else {
+      // For debugging: log missing elements in the console
+      console.warn('Required element(s) not found: btnChange or demo');
+    }
+  </script>
+</body>
+</html>
