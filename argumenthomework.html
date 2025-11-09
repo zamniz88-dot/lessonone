@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML and JavaScript Example</title>
+</head>
+<body>
+  <h1>Welcome to My Web Page</h1>
+  <p id="message">This is a simple paragraph inside the body tag.</p>
+  <button id="changeBtn">Click Me!</button>
+
+  <script>
+    // JavaScript code inside the <script> tag
+    // Using document.getElementById() to select and modify HTML elements
+
+    const button = document.getElementById("changeBtn");
+    const message = document.getElementById("message");
+
+    button.onclick = function() {
+      message.textContent = "You clicked the button! The text has changed.";
+    };
+  </script>
+</body>
+</html>
